@@ -1,5 +1,5 @@
 context:
-  version: 1.106.0
+  version: "1.106.2"
 
 package:
   name: litellm
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/l/litellm/litellm-${{ version }}.tar.gz
-  sha256: 5c84cc7d928cdb6ec57c5d87f221e3d27ca755958ebae389d5663f822b6f7a19
+  sha256: 9f0e770cb007c8c6e78917ad7b5c4f059f7bdc4a3606f854831780ea53fd9e2d
 
 build:
   skip:
@@ -18,7 +18,7 @@ build:
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
     - cd ..
     - python -m pip install . -vv
-  number: 1
+  number: 0
   python:
     entry_points:
       - litellm = litellm:run_server
